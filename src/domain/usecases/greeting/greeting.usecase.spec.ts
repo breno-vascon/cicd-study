@@ -9,6 +9,6 @@ describe('GreetingUsecase', () => {
 
   it('should return Hello World message', () => {
     const result = usecase.execute();
-    expect(result.message).toBe('Hello World!');
+    expect(result.message).toBe('Hello World!!!');
   });
 });

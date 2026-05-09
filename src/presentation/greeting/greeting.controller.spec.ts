@@ -21,6 +21,6 @@ describe('GreetingController', () => {
   });
 
   it('should return "Hello World!"', () => {
-    expect(controller.getHello()).toBe('Hello World!');
+    expect(controller.getHello()).toBe('Hello World!!!');
   });
 });
