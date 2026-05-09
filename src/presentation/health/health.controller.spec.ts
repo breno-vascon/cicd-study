@@ -20,7 +20,7 @@ describe('HealthController', () => {
     controller = module.get<HealthController>(HealthController);
   });
 
-  it('should return { message: "ok" }', () => {
-    expect(controller.check()).toEqual({ message: 'ok' });
+  it('should return { message: "Working" }', () => {
+    expect(controller.check()).toEqual({ message: 'Working' });
   });
 });
