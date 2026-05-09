@@ -67,3 +67,10 @@ jobs:
 
       - name: E2E tests
         run: npm run test:e2e
+
+  deploy:
+    needs: [lint, unit-tests, e2e-tests]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to Render
+        run: curl -X POST "${{ secrets.RENDER_DEPLOY_HOOK }}"
