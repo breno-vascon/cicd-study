@@ -6,9 +6,11 @@ import { FindUsersUsecaseProvider } from '../../providers/users/find-users.useca
 import { User, UserSchema } from '../../../infra/schemas/user.schema';
 
 @Module({
-  imports: [MongooseModule.forFeature([{ name: User.name, schema: UserSchema }])],
+  imports: [
+    MongooseModule.forFeature([{ name: User.name, schema: UserSchema }]),
+  ],
   controllers: [UsersController],
   providers: [CreateUserUsecaseProvider, FindUsersUsecaseProvider],
   exports: [CreateUserUsecaseProvider, FindUsersUsecaseProvider],
 })
-export class UsersModule { }
+export class UsersModule {}

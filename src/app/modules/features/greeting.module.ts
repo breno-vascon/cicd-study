@@ -7,4 +7,4 @@ import { GreetingUsecaseProvider } from '../../providers/greeting/greeting.useca
   providers: [GreetingUsecaseProvider],
   exports: [GreetingUsecaseProvider],
 })
-export class GreetingModule { }
+export class GreetingModule {}

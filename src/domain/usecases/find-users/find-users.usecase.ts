@@ -4,7 +4,7 @@ import type { FindUsersRepository } from '../../repositories/find-users.reposito
 
 @Injectable()
 export class FindUsersUsecase implements IFindUsersUsecase {
-  constructor(private readonly findUsersRepository: FindUsersRepository) { }
+  constructor(private readonly findUsersRepository: FindUsersRepository) {}
 
   async execute(): Promise<FindUsersOutput[]> {
     const users = await this.findUsersRepository.execute();

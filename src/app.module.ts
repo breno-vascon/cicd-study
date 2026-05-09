@@ -14,4 +14,4 @@ import { UsersModule } from './app/modules/features/users.module';
     UsersModule,
   ],
 })
-export class AppModule { }
+export class AppModule {}

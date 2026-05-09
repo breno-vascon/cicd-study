@@ -7,4 +7,4 @@ import { HealthUsecaseProvider } from '../../providers/health/health.usecase.pro
   providers: [HealthUsecaseProvider],
   exports: [HealthUsecaseProvider],
 })
-export class HealthModule { }
+export class HealthModule {}
