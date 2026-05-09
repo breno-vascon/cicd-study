@@ -4,7 +4,7 @@ import { UserEntity } from '../../../domain/entities/user.entity';
 import { UserDocument } from '../../schemas/user.schema';
 
 export class CreateUserMongooseAdapter implements CreateUserRepository {
-  constructor(private readonly model: Model<UserDocument>) { }
+  constructor(private readonly model: Model<UserDocument>) {}
 
   async execute(user: UserEntity): Promise<UserEntity> {
     const created = await this.model.create(user);

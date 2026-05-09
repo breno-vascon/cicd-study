@@ -19,9 +19,20 @@ describe('CreateUserUsecase', () => {
       email: 'john@email.com',
     });
 
-    const result = await usecase.execute({ name: 'John', email: 'john@email.com' });
+    const result = await usecase.execute({
+      name: 'John',
+      email: 'john@email.com',
+    });
 
-    expect(result).toEqual({ id: '123', name: 'John', email: 'john@email.com' });
-    expect(repository.execute).toHaveBeenCalledWith({ name: 'John', email: 'john@email.com' });
+    expect(result).toEqual({
+      id: '123',
+      name: 'John',
+      email: 'john@email.com',
+    });
+    // eslint-disable-next-line @typescript-eslint/unbound-method
+    expect(repository.execute).toHaveBeenCalledWith({
+      name: 'John',
+      email: 'john@email.com',
+    });
   });
 });

@@ -4,7 +4,7 @@ import { UserEntity } from '../../../domain/entities/user.entity';
 import { UserDocument } from '../../schemas/user.schema';
 
 export class FindUsersMongooseAdapter implements FindUsersRepository {
-  constructor(private readonly model: Model<UserDocument>) { }
+  constructor(private readonly model: Model<UserDocument>) {}
 
   async execute(): Promise<UserEntity[]> {
     const users = await this.model.find().exec();

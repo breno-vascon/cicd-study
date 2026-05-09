@@ -13,7 +13,7 @@ export class UsersController {
     private readonly createUserUsecase: ICreateUserUsecase,
     @Inject(IFindUsersUsecaseSymbol)
     private readonly findUsersUsecase: IFindUsersUsecase,
-  ) { }
+  ) {}
 
   @Post()
   async create(@Body() dto: CreateUserDto): Promise<UserResponseDto> {

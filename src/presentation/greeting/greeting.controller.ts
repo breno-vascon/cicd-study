@@ -7,7 +7,7 @@ export class GreetingController {
   constructor(
     @Inject(IGreetingUsecaseSymbol)
     private readonly greetingUsecase: IGreetingUsecase,
-  ) { }
+  ) {}
 
   @Get()
   getHello(): string {
