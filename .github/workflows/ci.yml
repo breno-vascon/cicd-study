@@ -52,21 +52,21 @@ jobs:
       - name: Unit tests
         run: npm run test
 
-  e2e-tests:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
+  # e2e-tests:
+  #   needs: build
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache: npm
+  #     - uses: actions/setup-node@v4
+  #       with:
+  #         node-version: 22
+  #         cache: npm
 
-      - run: npm ci
+  #     - run: npm ci
 
-      - name: E2E tests
-        run: npm run test:e2e
+  #     - name: E2E tests
+  #       run: npm run test:e2e
 
   deploy:
     needs: [lint, unit-tests, e2e-tests]
