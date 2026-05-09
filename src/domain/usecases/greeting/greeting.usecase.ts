@@ -4,6 +4,6 @@ import { IGreetingUsecase, GreetingOutput } from './greeting.types';
 @Injectable()
 export class GreetingUsecase implements IGreetingUsecase {
   execute(): GreetingOutput {
-    return { message: 'Hello World!' };
+    return { message: 'Hello World!!!' };
   }
 }
